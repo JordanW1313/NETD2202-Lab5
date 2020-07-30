@@ -42,7 +42,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuNewClick(sender As Object, e As EventArgs) Handles mnuNew.Click
+    Private Sub MnuNewClick(sender As Object, e As EventArgs) Handles mnuFileNew.Click
         ' calls the ConfirmClose method
         ConfirmClose()
         ' if statement that runs if fileChanged is false
@@ -65,7 +65,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuOpenClick(sender As Object, e As EventArgs) Handles mnuOpen.Click
+    Private Sub MnuOpenClick(sender As Object, e As EventArgs) Handles mnuFileOpen.Click
         ' calls the ConfirmClose method
         ConfirmClose()
         ' if statement that runs if the fileChanged variable is false
@@ -101,7 +101,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuSaveClick(sender As Object, e As EventArgs) Handles mnuSave.Click
+    Private Sub MnuSaveClick(sender As Object, e As EventArgs) Handles mnuFileSave.Click
         ' calls the Save method
         Save(path)
     End Sub
@@ -110,14 +110,14 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuSaveAsClick(sender As Object, e As EventArgs) Handles mnuSaveAs.Click
+    Private Sub MnuSaveAsClick(sender As Object, e As EventArgs) Handles mnuFileSaveAs.Click
         ' declares a string variable called emptyPath and sets it to empty
         Dim emptyPath As String = String.Empty
         ' calls the Save method
         Save(emptyPath)
     End Sub
 
-    Private Sub MnuCloseClick(sender As Object, e As EventArgs) Handles mnuClose.Click
+    Private Sub MnuCloseClick(sender As Object, e As EventArgs) Handles mnuFileClose.Click
         ' calls the ConfirmClose method
         ConfirmClose()
         ' if statement that runs if the fileChanged variable is false
@@ -139,7 +139,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuExitClick(sender As Object, e As EventArgs) Handles mnuExit.Click
+    Private Sub MnuExitClick(sender As Object, e As EventArgs) Handles mnuFileExit.Click
         ' calls the ConfirmClose method
         ConfirmClose()
         ' if statement that runs if the fileChanged variable is false 
@@ -153,7 +153,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuCopyClick(sender As Object, e As EventArgs) Handles mnuCopy.Click
+    Private Sub MnuCopyClick(sender As Object, e As EventArgs) Handles mnuEditCopy.Click
         ' clears the clipboard
         Clipboard.Clear()
         ' If statement that runs if ther is selected text in the tex box
@@ -167,7 +167,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub mnuCut_Click(sender As Object, e As EventArgs) Handles mnuCut.Click
+    Private Sub mnuCut_Click(sender As Object, e As EventArgs) Handles mnuEditCut.Click
         ' clears the clipboard
         Clipboard.Clear()
         ' If statement that runs if ther is selected text in the tex box
@@ -183,7 +183,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub mnuPaste_Click(sender As Object, e As EventArgs) Handles mnuPaste.Click
+    Private Sub mnuPaste_Click(sender As Object, e As EventArgs) Handles mnuEditPaste.Click
         ' sets the selected text from the txtEditor to the text in the clipboard
         txtEditor.SelectedText = My.Computer.Clipboard.GetText()
     End Sub
@@ -192,7 +192,7 @@ Public Class frmTextEditor
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub MnuAboutClick(sender As Object, e As EventArgs) Handles mnuAbout.Click
+    Private Sub MnuAboutClick(sender As Object, e As EventArgs) Handles mnuHelpAbout.Click
         ' opens a message box with the course code the lab number and my name
         MessageBox.Show("NETD 2202" & vbCrLf & vbCrLf & "Lab #5" & vbCrLf & vbCrLf & "J. Wriker", "About")
     End Sub

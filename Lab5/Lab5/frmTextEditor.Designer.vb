@@ -25,18 +25,18 @@ Partial Class frmTextEditor
         Me.components = New System.ComponentModel.Container()
         Me.mnuMainMenu = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuNew = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuOpen = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuSave = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuSaveAs = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuClose = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileNew = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileOpen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileSave = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileSaveAs = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileClose = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEdit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuCopy = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuCut = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuPaste = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuEditCopy = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuEditCut = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuEditPaste = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelpAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtEditor = New System.Windows.Forms.TextBox()
         Me.TextEditorToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.mnuMainMenu.SuspendLayout()
@@ -53,103 +53,103 @@ Partial Class frmTextEditor
         '
         'mnuFile
         '
-        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuNew, Me.mnuOpen, Me.mnuSave, Me.mnuSaveAs, Me.mnuClose, Me.mnuExit})
+        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileNew, Me.mnuFileOpen, Me.mnuFileSave, Me.mnuFileSaveAs, Me.mnuFileClose, Me.mnuFileExit})
         Me.mnuFile.Name = "mnuFile"
         Me.mnuFile.Size = New System.Drawing.Size(37, 20)
         Me.mnuFile.Text = "&File"
         Me.mnuFile.ToolTipText = "Opens File Menu"
         '
-        'mnuNew
+        'mnuFileNew
         '
-        Me.mnuNew.Name = "mnuNew"
-        Me.mnuNew.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.mnuNew.Size = New System.Drawing.Size(180, 22)
-        Me.mnuNew.Text = "&New"
-        Me.mnuNew.ToolTipText = "Creates New Text File"
+        Me.mnuFileNew.Name = "mnuFileNew"
+        Me.mnuFileNew.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.mnuFileNew.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileNew.Text = "&New"
+        Me.mnuFileNew.ToolTipText = "Creates New Text File"
         '
-        'mnuOpen
+        'mnuFileOpen
         '
-        Me.mnuOpen.Name = "mnuOpen"
-        Me.mnuOpen.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.mnuOpen.Size = New System.Drawing.Size(180, 22)
-        Me.mnuOpen.Text = "&Open"
-        Me.mnuOpen.ToolTipText = "Open Existing Text File"
+        Me.mnuFileOpen.Name = "mnuFileOpen"
+        Me.mnuFileOpen.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.mnuFileOpen.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileOpen.Text = "&Open"
+        Me.mnuFileOpen.ToolTipText = "Open Existing Text File"
         '
-        'mnuSave
+        'mnuFileSave
         '
-        Me.mnuSave.Name = "mnuSave"
-        Me.mnuSave.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.mnuSave.Size = New System.Drawing.Size(180, 22)
-        Me.mnuSave.Text = "&Save"
-        Me.mnuSave.ToolTipText = "Save Existing Text File"
+        Me.mnuFileSave.Name = "mnuFileSave"
+        Me.mnuFileSave.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.mnuFileSave.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileSave.Text = "&Save"
+        Me.mnuFileSave.ToolTipText = "Save Existing Text File"
         '
-        'mnuSaveAs
+        'mnuFileSaveAs
         '
-        Me.mnuSaveAs.Name = "mnuSaveAs"
-        Me.mnuSaveAs.Size = New System.Drawing.Size(180, 22)
-        Me.mnuSaveAs.Text = "Save &As"
-        Me.mnuSaveAs.ToolTipText = "Saves New Text File"
+        Me.mnuFileSaveAs.Name = "mnuFileSaveAs"
+        Me.mnuFileSaveAs.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileSaveAs.Text = "Save &As"
+        Me.mnuFileSaveAs.ToolTipText = "Saves New Text File"
         '
-        'mnuClose
+        'mnuFileClose
         '
-        Me.mnuClose.Name = "mnuClose"
-        Me.mnuClose.Size = New System.Drawing.Size(180, 22)
-        Me.mnuClose.Text = "&Close"
-        Me.mnuClose.ToolTipText = "Closes Opened Text File"
+        Me.mnuFileClose.Name = "mnuFileClose"
+        Me.mnuFileClose.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileClose.Text = "&Close"
+        Me.mnuFileClose.ToolTipText = "Closes Opened Text File"
         '
-        'mnuExit
+        'mnuFileExit
         '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
-        Me.mnuExit.Text = "E&xit"
-        Me.mnuExit.ToolTipText = "Exits Program"
+        Me.mnuFileExit.Name = "mnuFileExit"
+        Me.mnuFileExit.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileExit.Text = "E&xit"
+        Me.mnuFileExit.ToolTipText = "Exits Program"
         '
         'mnuEdit
         '
-        Me.mnuEdit.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCopy, Me.mnuCut, Me.mnuPaste})
+        Me.mnuEdit.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuEditCopy, Me.mnuEditCut, Me.mnuEditPaste})
         Me.mnuEdit.Name = "mnuEdit"
         Me.mnuEdit.Size = New System.Drawing.Size(39, 20)
         Me.mnuEdit.Text = "&Edit"
         Me.mnuEdit.ToolTipText = "Opens Edit Menu"
         '
-        'mnuCopy
+        'mnuEditCopy
         '
-        Me.mnuCopy.Name = "mnuCopy"
-        Me.mnuCopy.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.mnuCopy.Size = New System.Drawing.Size(180, 22)
-        Me.mnuCopy.Text = "&Copy"
-        Me.mnuCopy.ToolTipText = "Copy Selected Text"
+        Me.mnuEditCopy.Name = "mnuEditCopy"
+        Me.mnuEditCopy.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.mnuEditCopy.Size = New System.Drawing.Size(180, 22)
+        Me.mnuEditCopy.Text = "&Copy"
+        Me.mnuEditCopy.ToolTipText = "Copy Selected Text"
         '
-        'mnuCut
+        'mnuEditCut
         '
-        Me.mnuCut.Name = "mnuCut"
-        Me.mnuCut.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuCut.Size = New System.Drawing.Size(180, 22)
-        Me.mnuCut.Text = "Cu&t"
-        Me.mnuCut.ToolTipText = "Cuts Selected Text"
+        Me.mnuEditCut.Name = "mnuEditCut"
+        Me.mnuEditCut.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.mnuEditCut.Size = New System.Drawing.Size(180, 22)
+        Me.mnuEditCut.Text = "Cu&t"
+        Me.mnuEditCut.ToolTipText = "Cuts Selected Text"
         '
-        'mnuPaste
+        'mnuEditPaste
         '
-        Me.mnuPaste.Name = "mnuPaste"
-        Me.mnuPaste.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.mnuPaste.Size = New System.Drawing.Size(180, 22)
-        Me.mnuPaste.Text = "&Paste"
-        Me.mnuPaste.ToolTipText = "Pastes Text From Clipboard"
+        Me.mnuEditPaste.Name = "mnuEditPaste"
+        Me.mnuEditPaste.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
+        Me.mnuEditPaste.Size = New System.Drawing.Size(180, 22)
+        Me.mnuEditPaste.Text = "&Paste"
+        Me.mnuEditPaste.ToolTipText = "Pastes Text From Clipboard"
         '
         'mnuHelp
         '
-        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuAbout})
+        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuHelpAbout})
         Me.mnuHelp.Name = "mnuHelp"
         Me.mnuHelp.Size = New System.Drawing.Size(44, 20)
         Me.mnuHelp.Text = "&Help"
         Me.mnuHelp.ToolTipText = "Opens Help Menu"
         '
-        'mnuAbout
+        'mnuHelpAbout
         '
-        Me.mnuAbout.Name = "mnuAbout"
-        Me.mnuAbout.Size = New System.Drawing.Size(180, 22)
-        Me.mnuAbout.Text = "&About"
-        Me.mnuAbout.ToolTipText = "Opens About Window"
+        Me.mnuHelpAbout.Name = "mnuHelpAbout"
+        Me.mnuHelpAbout.Size = New System.Drawing.Size(180, 22)
+        Me.mnuHelpAbout.Text = "&About"
+        Me.mnuHelpAbout.ToolTipText = "Opens About Window"
         '
         'txtEditor
         '
@@ -186,18 +186,18 @@ Partial Class frmTextEditor
 
     Friend WithEvents mnuMainMenu As MenuStrip
     Friend WithEvents mnuFile As ToolStripMenuItem
-    Friend WithEvents mnuNew As ToolStripMenuItem
-    Friend WithEvents mnuOpen As ToolStripMenuItem
-    Friend WithEvents mnuSave As ToolStripMenuItem
-    Friend WithEvents mnuSaveAs As ToolStripMenuItem
-    Friend WithEvents mnuClose As ToolStripMenuItem
-    Friend WithEvents mnuExit As ToolStripMenuItem
+    Friend WithEvents mnuFileNew As ToolStripMenuItem
+    Friend WithEvents mnuFileOpen As ToolStripMenuItem
+    Friend WithEvents mnuFileSave As ToolStripMenuItem
+    Friend WithEvents mnuFileSaveAs As ToolStripMenuItem
+    Friend WithEvents mnuFileClose As ToolStripMenuItem
+    Friend WithEvents mnuFileExit As ToolStripMenuItem
     Friend WithEvents mnuEdit As ToolStripMenuItem
-    Friend WithEvents mnuCopy As ToolStripMenuItem
-    Friend WithEvents mnuCut As ToolStripMenuItem
-    Friend WithEvents mnuPaste As ToolStripMenuItem
+    Friend WithEvents mnuEditCopy As ToolStripMenuItem
+    Friend WithEvents mnuEditCut As ToolStripMenuItem
+    Friend WithEvents mnuEditPaste As ToolStripMenuItem
     Friend WithEvents mnuHelp As ToolStripMenuItem
-    Friend WithEvents mnuAbout As ToolStripMenuItem
+    Friend WithEvents mnuHelpAbout As ToolStripMenuItem
     Friend WithEvents txtEditor As TextBox
     Friend WithEvents TextEditorToolTip As ToolTip
 End Class
